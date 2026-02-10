@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/app/Navigation";
+
+const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "VGDC",
@@ -14,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${poppins.className} antialiased`}>
         <Navigation />
         {children}
       </body>

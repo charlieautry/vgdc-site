@@ -107,7 +107,7 @@ export default function Home() {
               {events.map((event, index) => (
                 <div key={index} className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all flex-shrink-0 w-80 snap-start p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-gray-600 px-2 py-1 rounded text-xs">{event.type}</span>
+                    <span className="bg-gray-600 px-2 py-1 rounded text-xs font-bold">{event.type}</span>
                     <span className="text-sm text-gray-400">
                       {event.time}
                       {event.endTime && ` - ${event.endTime}`}
@@ -130,7 +130,7 @@ export default function Home() {
               {events.map((event, index) => (
                 <div key={index} className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-gray-600 px-2 py-1 rounded text-xs">{event.type}</span>
+                    <span className="bg-gray-600 px-2 py-1 rounded text-xs font-bold">{event.type}</span>
                     <span className="text-sm text-gray-400">
                       {event.time}
                       {event.endTime && ` - ${event.endTime}`}

@@ -36,14 +36,14 @@ export default function Navigation() {
           >
             <img src="/images/resources.png" alt="Resources" className="h-4" />
           </Link>
-          <Link 
-            href="/game-jam" 
-            className={`hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium ${
-              pathname === '/game-jam' ? 'bg-gray-700' : ''
-            }`}
+          <a 
+            href="https://itch.io/jam/osu-game-jam-spring-2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
           >
             <img src="/images/gamejam.png" alt="Game Jam" className="h-8" />
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
