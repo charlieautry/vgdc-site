@@ -1,13 +1,41 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { events } from './data/events';
 import { importantEvents } from './data/importantEvents';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, FreeMode } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/free-mode';
 
 export default function Home() {
   const [currentEvent, setCurrentEvent] = useState(0);
   const [showGrid, setShowGrid] = useState(false);
-  
+
+  const upcomingEvents = useMemo(() => {
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+
+    const filtered = events.filter(event => {
+      const eventDate = new Date(event.endDate || event.date);
+      eventDate.setHours(23, 59, 59, 999); // Set to end of day
+
+      console.log('Event:', event.title);
+      console.log('Event date:', eventDate);
+      console.log('Now:', now);
+      console.log('Is upcoming:', eventDate >= now);
+
+      return eventDate >= now;
+    });
+
+    console.log('Total events:', events.length);
+    console.log('Upcoming events:', filtered.length);
+
+    return filtered;
+  }, []);
+
   const nextEvent = () => {
     setCurrentEvent((prev) => (prev + 1) % importantEvents.length);
   };
@@ -16,18 +44,47 @@ export default function Home() {
     setCurrentEvent((prev) => (prev - 1 + importantEvents.length) % importantEvents.length);
   };
 
-  const formatDate = (dateString: string) => dateString;
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const options: Intl.DateTimeFormatOptions = { 
+      weekday: 'long', 
+      month: 'long', 
+      day: 'numeric' 
+    };
+    return date.toLocaleDateString('en-US', options);
+  };
 
   return (
     <main className="min-h-screen pb-8 bg-gray-900 text-white">
       {/* Leaderboard Image */}
-      <div className="mb-8">
+      <div className="relative bg-gradient-to-b from-gray-700/50 via-gray-800/30 to-transparent">
         <img 
           src="/images/leaderboard.png" 
           alt="Leaderboard"
           className="w-full"
         />
       </div>
+
+      {/* Scrolling Banner */}
+      <a 
+        href="https://itch.io/jam/osu-game-jam-spring-2026" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block mb-8 overflow-hidden bg-red-600 py-3 hover:bg-red-700 transition-colors cursor-pointer"
+      >
+        <div className="animate-scroll whitespace-nowrap">
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+        </div>
+      </a>
 
       <div className="max-w-7xl mx-auto px-8">
         {/* Important Event Carousel */}
@@ -39,7 +96,7 @@ export default function Home() {
                   <img 
                     src={importantEvents[currentEvent].image} 
                     alt={importantEvents[currentEvent].title}
-                    className="w-full h-80 object-contain"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               )}
@@ -102,71 +159,84 @@ export default function Home() {
 
         {/* Events Grid */}
         <section className="mb-16">
-          {!showGrid ? (
-            <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-              {events.map((event, index) => (
-                <div key={index} className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all flex-shrink-0 w-80 snap-start p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-gray-600 px-2 py-1 rounded text-xs font-bold">{event.type}</span>
-                    <span className="text-sm text-gray-400">
-                      {event.time}
-                      {event.endTime && ` - ${event.endTime}`}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                  <p className="text-sm text-gray-400 mb-3">
-                    {formatDate(event.date)}
-                    {event.endDate && ` - ${formatDate(event.endDate)}`}
-                  </p>
-                  {event.location && (
-                    <p className="text-sm text-gray-400 mb-3">{event.location}</p>
-                  )}
-                  <p className="text-sm text-gray-300">{event.desc}</p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {events.map((event, index) => (
-                <div key={index} className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-gray-600 px-2 py-1 rounded text-xs font-bold">{event.type}</span>
-                    <span className="text-sm text-gray-400">
-                      {event.time}
-                      {event.endTime && ` - ${event.endTime}`}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                  <p className="text-sm text-gray-400 mb-3">
-                    {formatDate(event.date)}
-                    {event.endDate && ` - ${formatDate(event.endDate)}`}
-                  </p>
-                  {event.location && (
-                    <p className="text-sm text-gray-400 mb-3">{event.location}</p>
-                  )}
-                  <p className="text-sm text-gray-300">{event.desc}</p>
-                </div>
-              ))}
-            </div>
-          )}
-          
-          <div className="flex justify-end mt-4">
+          <div className="flex justify-end mb-4">
             <button
               onClick={() => setShowGrid(!showGrid)}
               className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-all"
               aria-label={showGrid ? 'Show Scroll View' : 'Show Grid View'}
             >
-              {showGrid ? (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+              {!showGrid ? (
+                <svg className="w-5 h-5 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
                 </svg>
               ) : (
-                <svg className="w-5 h-5 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                 </svg>
               )}
             </button>
           </div>
+
+          {!showGrid ? (
+            <Swiper
+              modules={[Navigation, FreeMode]}
+              navigation
+              freeMode
+              spaceBetween={24}
+              slidesPerView="auto"
+              className="!px-1 !py-2"
+              style={{
+                '--swiper-navigation-color': '#fff',
+                '--swiper-navigation-size': '20px',
+              } as React.CSSProperties}
+            >
+              {upcomingEvents.map((event, index) => (
+                <SwiperSlide key={index} className="!w-80 !h-auto">
+                  <div className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6 h-full flex flex-col">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-gray-600 px-2 py-1 rounded text-xs font-bold">{event.type}</span>
+                      <span className="text-sm text-gray-400">
+                        {event.time}
+                        {event.endTime && ` - ${event.endTime}`}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+                    <p className="text-sm text-gray-400 mb-3">
+                      {formatDate(event.date)}
+                      {event.endDate && ` - ${formatDate(event.endDate)}`}
+                    </p>
+                    {event.location && (
+                      <p className="text-sm text-gray-400 mb-3">{event.location}</p>
+                    )}
+                    <p className="text-sm text-gray-300 flex-1">{event.desc}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {upcomingEvents.map((event, index) => (
+                <div key={index} className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6 flex flex-col">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-gray-600 px-2 py-1 rounded text-xs font-bold">{event.type}</span>
+                    <span className="text-sm text-gray-400">
+                      {event.time}
+                      {event.endTime && ` - ${event.endTime}`}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+                  <p className="text-sm text-gray-400 mb-3">
+                    {formatDate(event.date)}
+                    {event.endDate && ` - ${formatDate(event.endDate)}`}
+                  </p>
+                  {event.location && (
+                    <p className="text-sm text-gray-400 mb-3">{event.location}</p>
+                  )}
+                  <p className="text-sm text-gray-300 flex-1">{event.desc}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
       </div>
     </main>

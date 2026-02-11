@@ -15,7 +15,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, February 4",
+    date: "2026-02-05",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -24,7 +24,7 @@ export const events: Event[] = [
     type: "Special Event",
     title: "Video Q&A with Goldfire Studios",
     desc: "Join us for a special video Q&A session with Goldfire Studios from Oklahoma City! Learn about professional game development and ask questions.",
-    date: "Wednesday, February 11",
+    date: "2026-02-12",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -33,7 +33,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, February 18",
+    date: "2026-02-19",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -42,7 +42,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Game Jam Kickoff with IEEE",
     desc: "Join us for the Game Jam kickoff event with IEEE! Get ready for an exciting game development challenge.",
-    date: "Monday, February 23",
+    date: "2026-02-24",
     time: "5:30 PM",
     location: "ES230"
   },
@@ -50,7 +50,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Wrap-up with VGDC",
     desc: "Join us for the wrap-up session with VGDC. Reflect on the game jam and share your experiences!",
-    date: "Wednesday, February 25",
+    date: "2026-02-26",
     time: "4:30 PM",
     location: "ES230"
   },
@@ -58,7 +58,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Awards with ACM",
     desc: "Join us for the awards ceremony with ACM! Celebrate the game jam winners and outstanding projects.",
-    date: "Thursday, February 26",
+    date: "2026-02-27",
     time: "5:30 PM",
     location: "ES230"
   },
@@ -66,7 +66,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, March 4",
+    date: "2026-03-05",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -75,7 +75,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, March 11",
+    date: "2026-03-12",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -84,7 +84,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, March 18",
+    date: "2026-03-19",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -93,7 +93,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, March 25",
+    date: "2026-03-26",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -102,7 +102,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, April 1",
+    date: "2026-04-02",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -111,7 +111,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, April 8",
+    date: "2026-04-09",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -120,7 +120,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, April 15",
+    date: "2026-04-16",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -129,7 +129,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, April 22",
+    date: "2026-04-23",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -138,7 +138,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, April 29",
+    date: "2026-04-30",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -147,7 +147,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, May 6",
+    date: "2026-05-07",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -156,7 +156,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, May 13",
+    date: "2026-05-14",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -165,7 +165,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, May 20",
+    date: "2026-05-21",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -174,7 +174,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "Wednesday, May 27",
+    date: "2026-05-28",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
