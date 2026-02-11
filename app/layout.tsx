@@ -7,7 +7,7 @@ import Footer from "@/app/components/Footer";
 const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OSU Video Game Development Club",
+  title: "OSU Video Game Dev Club",
   description: "The official site for the Oklahoma State University Video Game Development Club.",
   icons: {
     icon: '/favicon.ico',
