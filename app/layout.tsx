@@ -7,7 +7,7 @@ import Footer from "@/app/components/Footer";
 const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VGDC",
+  title: "OKState VGDC",
   description: "Video Game Development Club",
   icons: {
     icon: '/favicon.ico',
