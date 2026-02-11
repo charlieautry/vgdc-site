@@ -22,8 +22,10 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-6">25-26 Officer Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] bg-gray-700"></div>
-              <div className="p-6">
+              <div className="h-[32rem] overflow-hidden bg-gray-700">
+                {/* Placeholder for Dillon Eckley image */}
+              </div>
+              <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Dillon Eckley</h3>
                 <p className="text-gray-400 mb-2">President</p>
                 <p className="text-gray-400 mb-2">Applied Computer Programming</p>
@@ -31,12 +33,14 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <img 
-                src="/images/christopherknoles.jpg" 
-                alt="Christopher Knoles"
-                className="h-[32rem] w-full object-cover"
-              />
-              <div className="p-6">
+              <div className="h-[32rem] overflow-hidden">
+                <img 
+                  src="/images/christopherknoles.jpg" 
+                  alt="Christopher Knoles"
+                  className="w-full h-full object-cover scale-150"
+                />
+              </div>
+              <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Christopher Knoles</h3>
                 <p className="text-gray-400 mb-2">Vice-President</p>
                 <p className="text-gray-400 mb-2">Business Management</p>
@@ -44,8 +48,10 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] bg-gray-700"></div>
-              <div className="p-6">
+              <div className="h-[32rem] overflow-hidden bg-gray-700">
+                {/* Placeholder for Jase Scott image */}
+              </div>
+              <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Jase Scott</h3>
                 <p className="text-gray-400 mb-2">Secretary</p>
                 <p className="text-gray-400 mb-2">Computer Science</p>
@@ -53,8 +59,10 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] bg-gray-700"></div>
-              <div className="p-6">
+              <div className="h-[32rem] overflow-hidden bg-gray-700">
+                {/* Placeholder for Nathan Livesay image */}
+              </div>
+              <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Nathan Livesay</h3>
                 <p className="text-gray-400 mb-2">Treasurer</p>
                 <p className="text-gray-400 mb-2">Computer Science</p>
@@ -62,12 +70,14 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <img 
-                src="/images/joshuaprice.jpg" 
-                alt="Joshua Price"
-                className="h-[32rem] w-full object-cover"
-              />
-              <div className="p-6">
+              <div className="h-[32rem] overflow-hidden">
+                <img 
+                  src="/images/joshuaprice.jpg" 
+                  alt="Joshua Price"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Joshua Price</h3>
                 <p className="text-gray-400 mb-2">Outreach</p>
                 <p className="text-gray-400 mb-2">Computer Science</p>
@@ -75,12 +85,14 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <img 
-                src="/images/charlesautry.jpeg" 
-                alt="Charles Autry"
-                className="h-[32rem] w-full object-cover object-[center_20%]"
-              />
-              <div className="p-6">
+              <div className="h-[32rem] overflow-hidden">
+                <img 
+                  src="/images/charlesautry.jpeg" 
+                  alt="Charles Autry"
+                  className="w-full h-full object-cover object-[center_20%]"
+                />
+              </div>
+              <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Charles Autry</h3>
                 <p className="text-gray-400 mb-2">Marketing</p>
                 <p className="text-gray-400 mb-2">Computer Science</p>
