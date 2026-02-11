@@ -42,6 +42,19 @@ body {
   animation: scroll 20s linear infinite;
 }
 
+@keyframes spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 3s linear infinite;
+}
+
 /* Add noise texture to backgrounds */
 .bg-gray-900 {
   background-color: #111827;
@@ -71,8 +84,8 @@ body {
   background-size: 20px 20px;
 }
 
-/* Prevent image interaction and saving */
-img {
+/* Prevent image interaction and saving - but not SVGs */
+img:not(svg) {
   user-select: none;
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
@@ -80,6 +93,6 @@ img {
 }
 
 /* Re-enable pointer events for clickable images (like links) */
-a img {
+a img:not(svg) {
   pointer-events: auto;
 }

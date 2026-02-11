@@ -5,6 +5,7 @@ export interface Resource {
   url: string; // For links and downloads, this is the URL. For YouTube, this is the video ID
   category: string;
   tags: string[];
+  image?: string; // Optional OpenGraph image URL
 }
 
 export const resources: Resource[] = [
@@ -36,7 +37,7 @@ export const resources: Resource[] = [
     title: "Introduction to Game Development",
     description: "A comprehensive video introduction to game development concepts and best practices.",
     type: "youtube",
-    url: "_eK26atXTds", // Replace with actual video ID
+    url: "_eK26atXTds",
     category: "Tutorial",
     tags: ["beginner", "tutorial", "gamedev", "youtube"]
   },
