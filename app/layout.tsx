@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "VGDC",
   description: "Video Game Development Club",
   icons: {
-    icon: '/icon.png',
+    icon: '/favicon.ico',
   },
 };
 
