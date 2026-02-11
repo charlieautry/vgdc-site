@@ -55,7 +55,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-2">Jase Scott</h3>
                 <p className="text-gray-400 mb-2">Secretary</p>
                 <p className="text-gray-400 mb-2">Computer Science</p>
-                <p className="text-gray-400">Year in School</p>
+                <p className="text-gray-400">Junior</p>
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
@@ -81,7 +81,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-2">Joshua Price</h3>
                 <p className="text-gray-400 mb-2">Outreach</p>
                 <p className="text-gray-400 mb-2">Computer Science</p>
-                <p className="text-gray-400">Year in School</p>
+                <p className="text-gray-400">Senior</p>
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
