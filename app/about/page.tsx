@@ -87,7 +87,7 @@ export default function About() {
             <div className="bg-gray-800 rounded-lg overflow-hidden">
               <div className="h-[32rem] overflow-hidden">
                 <img 
-                  src="/images/charlesautry.jpeg" 
+                  src="/images/charlesautry.JPEG" 
                   alt="Charles Autry"
                   className="w-full h-full object-cover object-[center_20%]"
                 />
