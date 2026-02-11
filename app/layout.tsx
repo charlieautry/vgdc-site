@@ -9,6 +9,9 @@ const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin
 export const metadata: Metadata = {
   title: "VGDC",
   description: "Video Game Development Club",
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({

@@ -22,16 +22,8 @@ export default function Home() {
       const eventDate = new Date(event.endDate || event.date);
       eventDate.setHours(23, 59, 59, 999); // Set to end of day
 
-      console.log('Event:', event.title);
-      console.log('Event date:', eventDate);
-      console.log('Now:', now);
-      console.log('Is upcoming:', eventDate >= now);
-
       return eventDate >= now;
     });
-
-    console.log('Total events:', events.length);
-    console.log('Upcoming events:', filtered.length);
 
     return filtered;
   }, []);
