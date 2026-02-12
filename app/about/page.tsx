@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { galleryImages } from '../data/gallery';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs, FreeMode } from 'swiper/modules';
@@ -33,11 +34,12 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden">
-                <img 
+              <div className="h-[32rem] overflow-hidden relative">
+                <Image 
                   src="/images/christopherknoles.jpg" 
                   alt="Christopher Knoles"
-                  className="w-full h-full object-cover scale-150"
+                  fill
+                  className="object-cover scale-150"
                 />
               </div>
               <div className="p-6 bg-gray-800">
@@ -48,8 +50,13 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden bg-gray-700">
-                {/* Placeholder for Jase Scott image */}
+              <div className="h-[32rem] overflow-hidden relative">
+                <Image 
+                  src="/images/jasescott.jpg" 
+                  alt="Jase Scott"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Jase Scott</h3>
@@ -59,8 +66,13 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden bg-gray-700">
-                {/* Placeholder for Nathan Livesay image */}
+              <div className="h-[32rem] overflow-hidden relative">
+                <Image 
+                  src="/images/nathanlivesay.png" 
+                  alt="Nathan Livesay"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Nathan Livesay</h3>
@@ -70,11 +82,12 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden">
-                <img 
+              <div className="h-[32rem] overflow-hidden relative">
+                <Image 
                   src="/images/joshuaprice.jpg" 
                   alt="Joshua Price"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="p-6 bg-gray-800">
@@ -85,11 +98,12 @@ export default function About() {
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden">
-                <img 
+              <div className="h-[32rem] overflow-hidden relative">
+                <Image 
                   src="/images/charlesautry.jpeg" 
                   alt="Charles Autry"
-                  className="w-full h-full object-cover object-[center_20%]"
+                  fill
+                  className="object-cover object-[center_20%]"
                 />
               </div>
               <div className="p-6 bg-gray-800">
@@ -118,11 +132,12 @@ export default function About() {
                 } as React.CSSProperties}
               >
                 {galleryImages.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <img
+                  <SwiperSlide key={index} className="relative">
+                    <Image
                       src={image}
                       alt={`Gallery image ${index + 1}`}
-                      className="w-full h-full object-cover bg-gray-800"
+                      fill
+                      className="object-cover bg-gray-800"
                     />
                   </SwiperSlide>
                 ))}
@@ -145,11 +160,12 @@ export default function About() {
               >
                 {galleryImages.map((image, index) => (
                   <SwiperSlide key={index} className="!h-auto">
-                    <div className="aspect-square rounded-lg overflow-hidden cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
-                      <img
+                    <div className="aspect-square rounded-lg overflow-hidden cursor-pointer opacity-70 hover:opacity-100 transition-opacity relative">
+                      <Image
                         src={image}
                         alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover bg-gray-800"
+                        fill
+                        className="object-cover bg-gray-800"
                       />
                     </div>
                   </SwiperSlide>
