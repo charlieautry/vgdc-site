@@ -100,7 +100,7 @@ export default function About() {
             <div className="bg-gray-800 rounded-lg overflow-hidden">
               <div className="h-[32rem] overflow-hidden relative">
                 <Image 
-                  src="/images/charlesautry.jpeg" 
+                  src="/images/charlesautry.JPEG" 
                   alt="Charles Autry"
                   fill
                   className="object-cover object-[center_20%]"
