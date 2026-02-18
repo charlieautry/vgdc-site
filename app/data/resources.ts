@@ -136,5 +136,21 @@ export const resources: Resource[] = [
     url: "https://www.youtube.com/@GMTK",
     category: "Tutorial",
     tags: ["game design", "analysis", "youtube", "theory", "mechanics", "essay"]
+  },
+  {
+    title: "How To Market A Game",
+    description: "Website to learn how to effectively market your game, from social media strategies to press outreach.",
+    type: "link",
+    url: "https://howtomarketagame.com/",
+    category: "Marketing",
+    tags: ["marketing", "game development", "social media", "press outreach"]
+  },
+  {
+    title: "GDC Vault",
+    description: "Extensive library of game development talks, presentations, and panels from the Game Developers Conference. Learn from industry experts on a wide range of topics.",
+    type: "link",
+    url: "https://www.gdcvault.com/",
+    category: "Tutorial",
+    tags: ["gdc", "tutorial", "game development", "talks", "panels", "presentations"]
   }
 ];
