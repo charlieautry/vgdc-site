@@ -12,28 +12,10 @@ export interface Event {
 
 export const events: Event[] = [
   {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-02-05",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Special Event",
-    title: "Video Q&A with Goldfire Studios",
-    desc: "Join us for a special video Q&A session with Goldfire Studios from Oklahoma City! Learn about professional game development and ask questions.",
-    date: "2026-02-12",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-02-19",
+    type: "Special Guest",
+    title: "Q&A With Goldfire Studios",
+    desc: "Join us for an exciting Q&A session with James Simpson, the founder of GoldFire Studios! Get insights into the game development industry and ask your burning questions.",
+    date: "2026-02-18",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -42,7 +24,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Game Jam Kickoff with IEEE",
     desc: "Join us for the Game Jam kickoff event with IEEE! Get ready for an exciting game development challenge.",
-    date: "2026-02-24",
+    date: "2026-02-23",
     time: "5:30 PM",
     location: "ES230"
   },
@@ -50,7 +32,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Wrap-up with VGDC",
     desc: "Join us for the wrap-up session with VGDC. Reflect on the game jam and share your experiences!",
-    date: "2026-02-26",
+    date: "2026-02-25",
     time: "4:30 PM",
     location: "ES230"
   },
@@ -58,7 +40,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Awards with ACM",
     desc: "Join us for the awards ceremony with ACM! Celebrate the game jam winners and outstanding projects.",
-    date: "2026-02-27",
+    date: "2026-02-26",
     time: "5:30 PM",
     location: "ES230"
   },
