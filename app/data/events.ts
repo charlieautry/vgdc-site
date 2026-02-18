@@ -15,7 +15,7 @@ export const events: Event[] = [
     type: "Special Guest",
     title: "Q&A With Goldfire Studios",
     desc: "Join us for an exciting Q&A session with James Simpson, the founder of GoldFire Studios! Get insights into the game development industry and ask your burning questions.",
-    date: "2026-02-18",
+    date: "2026-02-19",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -24,7 +24,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Game Jam Kickoff with IEEE",
     desc: "Join us for the Game Jam kickoff event with IEEE! Get ready for an exciting game development challenge.",
-    date: "2026-02-23",
+    date: "2026-02-24",
     time: "5:30 PM",
     location: "ES230"
   },
@@ -32,7 +32,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Wrap-up with VGDC",
     desc: "Join us for the wrap-up session with VGDC. Reflect on the game jam and share your experiences!",
-    date: "2026-02-25",
+    date: "2026-02-26",
     time: "4:30 PM",
     location: "ES230"
   },
@@ -40,7 +40,7 @@ export const events: Event[] = [
     type: "Game Jam",
     title: "Awards with ACM",
     desc: "Join us for the awards ceremony with ACM! Celebrate the game jam winners and outstanding projects.",
-    date: "2026-02-26",
+    date: "2026-02-27",
     time: "5:30 PM",
     location: "ES230"
   },
