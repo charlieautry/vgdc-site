@@ -17,14 +17,26 @@ try {
   // Read all files in the gallery directory
   const files = fs.readdirSync(galleryDir);
   
-  // Filter for image files only
-  const imageFiles = files.filter(file => {
-    const ext = path.extname(file).toLowerCase();
-    return imageExtensions.includes(ext);
-  });
+  // Filter for image files only and get their stats
+  const imageFilesWithStats = files
+    .filter(file => {
+      const ext = path.extname(file).toLowerCase();
+      return imageExtensions.includes(ext);
+    })
+    .map(file => {
+      const filePath = path.join(galleryDir, file);
+      const stats = fs.statSync(filePath);
+      return {
+        name: file,
+        mtime: stats.mtime
+      };
+    });
+
+  // Sort by modification time, newest first
+  imageFilesWithStats.sort((a, b) => b.mtime - a.mtime);
 
   // Generate the paths
-  const imagePaths = imageFiles.map(file => `/images/gallery/${file}`);
+  const imagePaths = imageFilesWithStats.map(file => `/images/gallery/${file.name}`);
 
   // Create the TypeScript file content
   const content = `// This file is auto-generated. Do not edit manually.

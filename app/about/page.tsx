@@ -142,7 +142,7 @@ export default function About() {
                       src={image}
                       alt={`Gallery image ${index + 1}`}
                       fill
-                      className="object-cover bg-gray-800"
+                      className="object-contain bg-gray-800"
                     />
                   </SwiperSlide>
                 ))}

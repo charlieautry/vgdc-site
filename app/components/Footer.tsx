@@ -48,7 +48,7 @@ export default function Footer() {
             </div>
             
             {/* Social Media Grid */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <a 
                 href="https://campuslink.okstate.edu/organization/videogamedevelopment" 
                 target="_blank" 
@@ -85,6 +85,20 @@ export default function Footer() {
                 <img 
                   src="/images/groupme.png" 
                   alt="GroupMe" 
+                  className="w-6 h-6 brightness-0 invert"
+                />
+              </a>
+              
+              <a 
+                href="https://linktr.ee/OSU_VGDC" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-gray-600 p-4 rounded-lg transition-colors flex items-center justify-center"
+                aria-label="Linktree"
+              >
+                <img 
+                  src="/images/linktree.svg" 
+                  alt="Linktree" 
                   className="w-6 h-6 brightness-0 invert"
                 />
               </a>

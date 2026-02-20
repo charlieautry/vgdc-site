@@ -22,9 +22,18 @@ export default function Navigation() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (e: React.MouseEvent) => {
     if (isMobile) {
+      if (!isHovering) {
+        e.preventDefault();
+      }
       setIsHovering(!isHovering);
+    }
+  };
+
+  const handleGameJamLinkClick = (e: React.MouseEvent) => {
+    if (isMobile && !isHovering) {
+      e.preventDefault();
     }
   };
 
@@ -87,7 +96,10 @@ export default function Navigation() {
                       href="https://itch.io/jam/osu-game-jam-spring-2026"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleGameJamLinkClick(e);
+                      }}
                       className="transition-transform"
                     >
                       <img src="/images/gamejam.png" alt="Game Jam" className="h-6 sm:h-8" />
