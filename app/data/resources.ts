@@ -152,5 +152,85 @@ export const resources: Resource[] = [
     url: "https://www.gdcvault.com/",
     category: "Tutorial",
     tags: ["gdc", "tutorial", "game development", "talks", "panels", "presentations"]
+  },
+  {
+    title: "itch.io",
+    description: "Indie game platform for hosting, selling, and discovering independent games. Perfect for publishing game jam projects and prototypes.",
+    type: "link",
+    url: "https://itch.io/",
+    category: "Community",
+    tags: ["indie", "publishing", "marketplace", "game jam", "community", "platform"]
+  },
+  {
+    title: "Kenney Game Assets",
+    description: "Massive collection of free game assets including 2D sprites, 3D models, UI elements, and sound effects. All public domain.",
+    type: "link",
+    url: "https://kenney.nl/",
+    category: "Tool",
+    tags: ["assets", "free", "2d", "3d", "sprites", "ui", "sounds", "public domain"]
+  },
+  {
+    title: "Unreal Engine Documentation",
+    description: "Official comprehensive documentation for Unreal Engine. Learn blueprints, C++, rendering, and advanced engine features.",
+    type: "link",
+    url: "https://docs.unrealengine.com/",
+    category: "Documentation",
+    tags: ["unreal", "engine", "documentation", "blueprints", "c++", "3d"]
+  },
+  {
+    title: "GameDev.net",
+    description: "Long-running game development community with articles, tutorials, forums, and resources covering programming, art, design, and business.",
+    type: "link",
+    url: "https://www.gamedev.net/",
+    category: "Community",
+    tags: ["community", "articles", "forums", "tutorial", "programming", "resources"]
+  },
+  {
+    title: "Polycount",
+    description: "Premier community for game artists and 3D modelers. Features forums, wiki, and galleries showcasing professional game art techniques.",
+    type: "link",
+    url: "https://polycount.com/",
+    category: "Community",
+    tags: ["3d", "art", "modeling", "community", "forums", "gallery", "texturing"]
+  },
+  {
+    title: "Sebastian Lague YouTube",
+    description: "Excellent programming tutorials covering procedural generation, coding adventures, and game development concepts with beautiful visualizations.",
+    type: "link",
+    url: "https://www.youtube.com/@SebastianLague",
+    category: "Tutorial",
+    tags: ["programming", "procedural", "tutorial", "youtube", "coding", "algorithms"]
+  },
+  {
+    title: "Freesound",
+    description: "Collaborative database of Creative Commons licensed sounds. Find and share sound effects and audio samples for your game projects.",
+    type: "link",
+    url: "https://freesound.org/",
+    category: "Tool",
+    tags: ["audio", "sound effects", "sfx", "free", "creative commons", "game audio"]
+  },
+  {
+    title: "Shadertoy",
+    description: "Online community and tool for creating and sharing shaders. Learn shader programming through thousands of examples and live coding.",
+    type: "link",
+    url: "https://www.shadertoy.com/",
+    category: "Tool",
+    tags: ["shaders", "graphics", "programming", "glsl", "visual effects", "learning"]
+  },
+  {
+    title: "Game Programming Patterns",
+    description: "Free online book by Bob Nystrom covering essential software design patterns specifically for game development. Includes clear examples and explanations.",
+    type: "link",
+    url: "https://gameprogrammingpatterns.com/",
+    category: "Documentation",
+    tags: ["programming", "patterns", "design", "book", "architecture", "free"]
+  },
+  {
+    title: "Bevy Engine",
+    description: "Modern, data-driven game engine built in Rust. Features ECS architecture, powerful plugin system, and excellent performance.",
+    type: "link",
+    url: "https://bevyengine.org/",
+    category: "Tool",
+    tags: ["engine", "rust", "ecs", "open source", "2d", "3d", "modern"]
   }
 ];
