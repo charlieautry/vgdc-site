@@ -189,14 +189,14 @@ export default function About() {
             <div className="space-y-4 text-gray-300">
               <p className="text-xl indent-8">
                     The Video Game Development Club was founded in 2015 and officially re-sponsored in 2026. 
-                We are a passionate community of game developers, designers, and enthusiasts inspired by everything videogames. For over a decade, we've been dedicated to fostering creativity, learning, and collaboration among our members.
+                We are a passionate community of game developers, designers, and enthusiasts inspired by everything videogames. For over a decade, we&apos;ve been dedicated to fostering creativity, learning, and collaboration among our members.
               </p>
             <p className="text-xl indent-8">
                     Our mission as a club is to get more people involved in game development, and we provide a large network of support and resources to help our members learn and grow. From resources and workshops 
                 to game jams and projects, there are a wide range of opportunities for members to develop their skills and connect with others who share their passion for creation.
               </p>
               <p className="text-xl indent-8">
-                    Your experience level doesn't matter - whether you're a complete beginner or an experienced developer, we welcome you to join us and be a part of our community. We believe that everyone has something valuable to contribute, and we strive to create an inclusive and supportive environment where all members can thrive.
+                    Your experience level doesn&apos;t matter - whether you&apos;re a complete beginner or an experienced developer, we welcome you to join us and be a part of our community. We believe that everyone has something valuable to contribute, and we strive to create an inclusive and supportive environment where all members can thrive.
               </p>
             </div>
           </div>

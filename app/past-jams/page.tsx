@@ -105,6 +105,7 @@ export default function PastJams() {
 
                     {/* Game Image */}
                     <div className="aspect-square bg-gray-700 overflow-hidden relative">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img 
                         src={game.image}
                         alt={game.title}
@@ -133,6 +134,7 @@ export default function PastJams() {
                 rel="noopener noreferrer"
                 className="transition-all hover:scale-105"
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="/images/itchiocolor.svg" 
                   alt="View results on itch.io" 

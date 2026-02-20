@@ -85,7 +85,7 @@ export default function Resources() {
     return (
       <div 
         key={index} 
-        ref={(el) => resourceRefs.current[index] = el}
+        ref={(el) => { resourceRefs.current[index] = el; }}
         className={`bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6 ${
           isHighlighted ? 'ring-4 ring-blue-500' : ''
         }`}

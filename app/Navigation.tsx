@@ -45,6 +45,7 @@ export default function Navigation() {
             href="/" 
             className="mr-2 sm:mr-4"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               src="/images/logo.png" 
               alt="VGDC Logo" 
@@ -68,6 +69,7 @@ export default function Navigation() {
               pathname === '/about' ? 'bg-gray-700' : ''
             }`}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/about.png" alt="About" className="h-3 sm:h-4" />
           </Link>
           <Link 
@@ -76,6 +78,7 @@ export default function Navigation() {
               pathname === '/resources' ? 'bg-gray-700' : ''
             }`}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/resources.png" alt="Resources" className="h-3 sm:h-4" />
           </Link>
           
@@ -86,7 +89,7 @@ export default function Navigation() {
             className="relative"
           >
             <Menu>
-              {({ open }) => (
+              {() => (
                 <>
                   <Menu.Button 
                     className="px-2 sm:px-3 py-0 rounded-t-md text-sm font-medium flex items-center h-16 transition-all hover:scale-110"
@@ -102,6 +105,7 @@ export default function Navigation() {
                       }}
                       className="transition-transform"
                     >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src="/images/gamejam.png" alt="Game Jam" className="h-6 sm:h-8" />
                     </a>
                   </Menu.Button>
@@ -126,7 +130,7 @@ export default function Navigation() {
                       }}
                     >
                       <Menu.Item>
-                        {({ active }) => (
+                        {() => (
                           <Link
                             href="/past-jams"
                             className="flex items-center justify-center w-full px-2 sm:px-3 py-2 transition-colors"
@@ -134,6 +138,7 @@ export default function Navigation() {
                             onMouseEnter={() => setIsPastJamsHover(true)}
                             onMouseLeave={() => setIsPastJamsHover(false)}
                           >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img 
                               src="/images/pastjams.png" 
                               alt="Past Jams" 
