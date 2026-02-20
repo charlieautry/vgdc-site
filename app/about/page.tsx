@@ -23,8 +23,13 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-6">25-26 Officer Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden bg-gray-700">
-                {/* Placeholder for Dillon Eckley image */}
+              <div className="h-[32rem] overflow-hidden relative">
+                <Image 
+                  src="/images/dilloneckley.jpg" 
+                  alt="Dillon Eckley"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6 bg-gray-800">
                 <h3 className="text-2xl font-bold mb-2">Dillon Eckley</h3>
@@ -94,7 +99,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-2">Joshua Price</h3>
                 <p className="text-gray-400 mb-2">Outreach</p>
                 <p className="text-gray-400 mb-2">Computer Science</p>
-                <p className="text-gray-400">Year in School</p>
+                <p className="text-gray-400">Senior</p>
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
