@@ -32,11 +32,11 @@ export const events: Event[] = [
   {
     type: "Info",
     title: "Cowboy Con",
-    desc: "Note: Cowboy Con happens during our regular meeting time this week. Check it out if you're interested!",
+    desc: "Come say hi at the annual Cowboy Con event that is FREE for our OSU and Stillwater community! They'll have a variety of activities including a Super Smash Bro Tournament, Cosplay Contest, FlipBook Photobooth, Trivia, vendors from all over the state & much more! Note: This happens during our regular meeting time.",
     date: "2026-03-25",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "TBD"
+    time: "5:00 PM",
+    endTime: "9:00 PM",
+    location: "Student Union Ballroom (SU 265)"
   },
   {
     type: "Game Jam",
