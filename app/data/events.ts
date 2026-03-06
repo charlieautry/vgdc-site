@@ -24,7 +24,7 @@ export const events: Event[] = [
     type: "Meeting",
     title: "Weekly VGDC Meeting",
     desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-03-19",
+    date: "2026-03-18",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
