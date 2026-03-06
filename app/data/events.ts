@@ -12,52 +12,10 @@ export interface Event {
 
 export const events: Event[] = [
   {
-    type: "Special Guest",
-    title: "Q&A With Goldfire Studios",
-    desc: "Join us for an exciting Q&A session with James Simpson, the founder of GoldFire Studios! Get insights into the game development industry and ask your burning questions.",
-    date: "2026-02-19",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Game Jam",
-    title: "Game Jam Kickoff with IEEE",
-    desc: "Join us for the Game Jam kickoff event with IEEE! Get ready for an exciting game development challenge.",
-    date: "2026-02-24",
-    time: "5:30 PM",
-    location: "ES230"
-  },
-  {
-    type: "Game Jam",
-    title: "Wrap-up with VGDC",
-    desc: "Join us for the wrap-up session with VGDC. Reflect on the game jam and share your experiences!",
-    date: "2026-02-26",
-    time: "4:30 PM",
-    location: "ES230"
-  },
-  {
-    type: "Game Jam",
-    title: "Awards with ACM",
-    desc: "Join us for the awards ceremony with ACM! Celebrate the game jam winners and outstanding projects.",
-    date: "2026-02-27",
-    time: "5:30 PM",
-    location: "ES230"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-03-05",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-03-12",
+    type: "Social",
+    title: "Board Game Night",
+    desc: "Join us for a fun board game night! We'll also announce the Chill Jam!",
+    date: "2026-03-11",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
@@ -72,91 +30,55 @@ export const events: Event[] = [
     location: "MSCS 445"
   },
   {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-03-26",
+    type: "Info",
+    title: "Cowboy Con",
+    desc: "Note: Cowboy Con happens during our regular meeting time this week. Check it out if you're interested!",
+    date: "2026-03-25",
+    time: "4:30 PM",
+    endTime: "6:30 PM",
+    location: "TBD"
+  },
+  {
+    type: "Game Jam",
+    title: "Chill Jam Finale",
+    desc: "Join us for the Chill Jam finale! Play and chat about the games that were made during the jam.",
+    date: "2026-04-01",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
   },
   {
     type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-04-02",
+    title: "TBD",
+    desc: "Event details to be announced. Check back soon!",
+    date: "2026-04-08",
+    time: "4:30 PM",
+    endTime: "6:30 PM",
+    location: "MSCS 445"
+  },
+  {
+    type: "Game Jam",
+    title: "1 Week Jam Announcement",
+    desc: "Join us as we announce and kick off our 1 Week Game Jam! Get ready for a week of intense game development.",
+    date: "2026-04-15",
+    time: "4:30 PM",
+    endTime: "6:30 PM",
+    location: "MSCS 445"
+  },
+  {
+    type: "Special",
+    title: "Officer Selection and Election",
+    desc: "Join us for the officer selection and election! Vote for the next year's leadership team.",
+    date: "2026-04-22",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
   },
   {
     type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-04-09",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-04-16",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-04-23",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
+    title: "Officer Meeting (2027-2028 Planning)",
+    desc: "Officer meeting for the 2027-2028 academic year, including both new and outgoing officers.",
     date: "2026-04-30",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-05-07",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-05-14",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-05-21",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
-    date: "2026-05-28",
     time: "4:30 PM",
     endTime: "6:30 PM",
     location: "MSCS 445"
