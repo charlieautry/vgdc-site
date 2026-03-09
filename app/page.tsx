@@ -60,22 +60,22 @@ export default function Home() {
 
       {/* Scrolling Banner */}
       <a 
-        href="https://itch.io/jam/osu-game-jam-spring-2026" 
+        href="https://campuslink.okstate.edu/organization/videogamedevelopment" 
         target="_blank" 
         rel="noopener noreferrer"
         className="block mb-8 overflow-hidden bg-red-600 py-3 hover:bg-red-700 transition-colors cursor-pointer"
       >
         <div className="animate-scroll whitespace-nowrap">
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
-          <span className="text-xl font-bold mx-8">REGISTER FOR THE SPRING 2026 GAME JAM TODAY</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
+          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
         </div>
       </a>
 
