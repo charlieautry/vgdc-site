@@ -21,13 +21,13 @@ export const events: Event[] = [
     location: "MSCS 445"
   },
   {
-    type: "Meeting",
-    title: "Weekly VGDC Meeting",
-    desc: "Join us for our weekly game development meeting! Work on projects, share tips, and collaborate with fellow developers.",
+    type: "Spring Break",
+    title: "No Meeting",
+    desc: "No meeting due to Spring Break. Enjoy your break!",
     date: "2026-03-18",
     time: "4:30 PM",
     endTime: "6:30 PM",
-    location: "MSCS 445"
+    location: "N/A"
   },
   {
     type: "Info",
