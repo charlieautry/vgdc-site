@@ -40,8 +40,8 @@ export const events: Event[] = [
   },
   {
     type: "Game Jam",
-    title: "Chill Jam Finale",
-    desc: "Join us for the Chill Jam finale! Play and chat about the games that were made during the jam.",
+    title: "April Jam Finale",
+    desc: "Join us for the April Jam finale! Play and chat about the games that were made during March.",
     date: "2026-04-01",
     time: "4:30 PM",
     endTime: "6:30 PM",
@@ -58,8 +58,8 @@ export const events: Event[] = [
   },
   {
     type: "Game Jam",
-    title: "1 Week Jam Announcement",
-    desc: "Join us as we announce and kick off our 1 Week Game Jam! Get ready for a week of intense game development.",
+    title: "7 Days Jam Announcement",
+    desc: "Join us as we announce and kick off our 7 Days Game Jam! Get ready for a week of intense game development.",
     date: "2026-04-15",
     time: "4:30 PM",
     endTime: "6:30 PM",
