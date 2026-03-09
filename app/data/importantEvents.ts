@@ -11,11 +11,11 @@ export interface ImportantEvent {
 
 export const importantEvents: ImportantEvent[] = [
   {
-    title: "OSU Spring Game Jam",
-    image: "/images/osugamejamflyer.png",
-    description: "Join us for our biggest event of the semester with a $300 prize pool! 72 hours to create a game from scratch. All levels of experience are welcome. Come experience prizes, food, and fun!",
-    date: "Feb 23 - 26",
-    link: "https://itch.io/jam/osu-game-jam-spring-2026",
-    linkText: "Register here"
+    title: "Events Coming Soon!",
+    image: "/images/VGDC_Spring_2026_Flyer.PNG",
+    description: "Nothing to see here right now, but stay tuned for more information about our upcoming events!",
+    date: "Spring 2026",
+    link: "",
+    linkText: ""
   }
 ];
