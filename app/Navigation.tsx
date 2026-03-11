@@ -96,7 +96,7 @@ export default function Navigation() {
                     onClick={handleButtonClick}
                   >
                     <a 
-                      href="https://itch.io/jam/osu-game-jam-spring-2026"
+                      href="https://itch.io/jam/osu-spring-2026-chill-jam"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => {
