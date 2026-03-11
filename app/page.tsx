@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { events } from './data/events';
+import { events, Event } from './data/events';
 import { importantEvents } from './data/importantEvents';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, FreeMode } from 'swiper/modules';
@@ -10,22 +10,50 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
 
+const parseLocalDate = (dateStr: string): Date => {
+  const [year, month, day] = dateStr.split('-').map(Number);
+  return new Date(year, month - 1, day);
+};
+
+const parseTime = (timeStr: string): { hours: number; minutes: number } => {
+  const [time, period] = timeStr.split(' ');
+  const [h, m] = time.split(':').map(Number);
+  let hours = h;
+  if (period === 'PM' && h !== 12) hours += 12;
+  if (period === 'AM' && h === 12) hours = 0;
+  return { hours, minutes: m };
+};
+
+const getEventEndDateTime = (event: Event): Date => {
+  const d = parseLocalDate(event.endDate || event.date);
+  if (event.endTime) {
+    const { hours, minutes } = parseTime(event.endTime);
+    d.setHours(hours, minutes, 0, 0);
+  } else {
+    d.setHours(23, 59, 59, 999);
+  }
+  return d;
+};
+
+const getEventStartDateTime = (event: Event): Date => {
+  const d = parseLocalDate(event.date);
+  const { hours, minutes } = parseTime(event.time);
+  d.setHours(hours, minutes, 0, 0);
+  return d;
+};
+
+const isHappeningNow = (event: Event): boolean => {
+  const now = new Date();
+  return getEventStartDateTime(event) <= now && getEventEndDateTime(event) >= now;
+};
+
 export default function Home() {
   const [currentEvent, setCurrentEvent] = useState(0);
   const [showGrid, setShowGrid] = useState(false);
 
   const upcomingEvents = useMemo(() => {
     const now = new Date();
-    now.setHours(0, 0, 0, 0);
-
-    const filtered = events.filter(event => {
-      const eventDate = new Date(event.endDate || event.date);
-      eventDate.setHours(23, 59, 59, 999); // Set to end of day
-
-      return eventDate >= now;
-    });
-
-    return filtered;
+    return events.filter(event => getEventEndDateTime(event) >= now);
   }, []);
 
   const nextEvent = () => {
@@ -183,10 +211,15 @@ export default function Home() {
                 '--swiper-navigation-size': '20px',
               } as React.CSSProperties}
             >
-              {upcomingEvents.map((event, index) => (
+              {upcomingEvents.map((event, index) => {
+                const happening = isHappeningNow(event);
+                return (
                 <SwiperSlide key={index} className="!w-80 !h-auto">
-                  <div className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6 h-full flex flex-col">
+                  <div className={`bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6 h-full flex flex-col ${happening ? 'ring-2 ring-green-500' : ''}`}>
                     <div className="flex items-center gap-2 mb-3">
+                      {happening && (
+                        <span className="bg-green-600 px-2 py-1 rounded text-xs font-bold animate-pulse">LIVE</span>
+                      )}
                       <span className="bg-gray-600 px-2 py-1 rounded text-xs font-bold">{event.type}</span>
                       <span className="text-sm text-gray-400">
                         {event.time}
@@ -204,13 +237,19 @@ export default function Home() {
                     <p className="text-sm text-gray-300 flex-1">{event.desc}</p>
                   </div>
                 </SwiperSlide>
-              ))}
+                );
+              })}
             </Swiper>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {upcomingEvents.map((event, index) => (
-                <div key={index} className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6 flex flex-col">
+              {upcomingEvents.map((event, index) => {
+                const happening = isHappeningNow(event);
+                return (
+                <div key={index} className={`bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-all p-6 flex flex-col ${happening ? 'ring-2 ring-green-500' : ''}`}>
                   <div className="flex items-center gap-2 mb-3">
+                    {happening && (
+                      <span className="bg-green-600 px-2 py-1 rounded text-xs font-bold animate-pulse">LIVE</span>
+                    )}
                     <span className="bg-gray-600 px-2 py-1 rounded text-xs font-bold">{event.type}</span>
                     <span className="text-sm text-gray-400">
                       {event.time}
@@ -227,7 +266,8 @@ export default function Home() {
                   )}
                   <p className="text-sm text-gray-300 flex-1">{event.desc}</p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </section>
