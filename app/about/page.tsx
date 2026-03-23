@@ -25,7 +25,7 @@ export default function About() {
             <div className="bg-gray-800 rounded-lg overflow-hidden">
               <div className="h-[32rem] overflow-hidden relative">
                 <Image 
-                  src="/images/dilloneckley.jpg" 
+                  src="/images/headshots/dilloneckley.jpg" 
                   alt="Dillon Eckley"
                   fill
                   className="object-cover"
@@ -41,7 +41,7 @@ export default function About() {
             <div className="bg-gray-800 rounded-lg overflow-hidden">
               <div className="h-[32rem] overflow-hidden relative">
                 <Image 
-                  src="/images/christopherknoles.jpg" 
+                  src="/images/headshots/christopherknoles.jpg" 
                   alt="Christopher Knoles"
                   fill
                   className="object-cover scale-150"
@@ -57,7 +57,7 @@ export default function About() {
             <div className="bg-gray-800 rounded-lg overflow-hidden">
               <div className="h-[32rem] overflow-hidden relative">
                 <Image 
-                  src="/images/jasescott.jpg" 
+                  src="/images/headshots/jasescott.jpg" 
                   alt="Jase Scott"
                   fill
                   className="object-cover"
@@ -73,7 +73,7 @@ export default function About() {
             <div className="bg-gray-800 rounded-lg overflow-hidden">
               <div className="h-[32rem] overflow-hidden relative">
                 <Image 
-                  src="/images/nathanlivesay.png" 
+                  src="/images/headshots/nathanlivesay.png" 
                   alt="Nathan Livesay"
                   fill
                   className="object-cover"
@@ -89,7 +89,7 @@ export default function About() {
             <div className="bg-gray-800 rounded-lg overflow-hidden">
               <div className="h-[32rem] overflow-hidden relative">
                 <Image 
-                  src="/images/joshuaprice.jpg" 
+                  src="/images/headshots/joshuaprice.jpg" 
                   alt="Joshua Price"
                   fill
                   className="object-cover"
@@ -105,7 +105,7 @@ export default function About() {
             <div className="bg-gray-800 rounded-lg overflow-hidden">
               <div className="h-[32rem] overflow-hidden relative">
                 <Image 
-                  src="/images/charlesautry.JPEG" 
+                  src="/images/headshots/charlesautry.JPEG" 
                   alt="Charles Autry"
                   fill
                   className="object-cover object-[center_20%]"

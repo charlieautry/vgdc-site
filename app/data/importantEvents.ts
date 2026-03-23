@@ -17,5 +17,13 @@ export const importantEvents: ImportantEvent[] = [
     date: "Spring 2026",
     link: "https://itch.io/jam/osu-spring-2026-chill-jam",
     linkText: "Join the Jam!"
+  },
+  {
+    title: "26-27 Officer Elections",
+    image: "/images/logo.png",
+    description: "Join us before the semester ends for our annual officer elections! Help elect next year's leadership team, or join the team yourself!",
+    date: "April 22nd, 2026",
+    link: "",
+    linkText: ""
   }
-];
+]

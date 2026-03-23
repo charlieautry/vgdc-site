@@ -62,6 +62,7 @@ export default function Footer() {
                   className="w-6 h-6 brightness-0 invert"
                 />
               </a>
+
               
               <a 
                 href="https://discord.gg/xcHV49H7T3" 

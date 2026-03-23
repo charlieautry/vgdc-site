@@ -12,15 +12,6 @@ export interface Event {
 
 export const events: Event[] = [
   {
-    type: "Social",
-    title: "Board Game Night",
-    desc: "Join us for a fun board game night! We'll also announce the Chill Jam!",
-    date: "2026-03-11",
-    time: "4:30 PM",
-    endTime: "6:30 PM",
-    location: "MSCS 445"
-  },
-  {
     type: "Spring Break",
     title: "No Meeting",
     desc: "No meeting due to Spring Break. Enjoy your break!",
