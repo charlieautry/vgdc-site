@@ -48,9 +48,9 @@ export const events: Event[] = [
     location: "MSCS 445"
   },
   {
-    type: "Game Jam",
-    title: "7 Days Jam Announcement",
-    desc: "Join us as we announce and kick off our 7 Days Game Jam! Get ready for a week of intense game development.",
+    type: "Special",
+    title: "Officer Selection and Election",
+    desc: "Join us for the officer selection and election! Vote for the next year's leadership team.",
     date: "2026-04-15",
     time: "4:30 PM",
     endTime: "6:30 PM",
@@ -58,8 +58,8 @@ export const events: Event[] = [
   },
   {
     type: "Special",
-    title: "Officer Selection and Election",
-    desc: "Join us for the officer selection and election! Vote for the next year's leadership team.",
+    title: "Meet a Doom Developer",
+    desc: "Our last event of the semester! Michael Woodard, Senior Gameplay Programmer at id Software and founder of VGDC, will join us virtually to talk about his work on Doom: Eternal and Doom: The Dark Ages, his role in founding the club, and answer your questions.",
     date: "2026-04-22",
     time: "4:30 PM",
     endTime: "6:30 PM",
