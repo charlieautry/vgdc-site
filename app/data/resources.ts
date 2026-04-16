@@ -232,5 +232,37 @@ export const resources: Resource[] = [
     url: "https://bevyengine.org/",
     category: "Tool",
     tags: ["engine", "rust", "ecs", "open source", "2d", "3d", "modern"]
+  },
+  {
+    title: "Chaos Game Interactive Classroom App",
+    description: "Interactive demo of the iterative chaos game algorithm. Adjust the number of points, rules, and ratios to watch fractals like the Sierpinski triangle emerge point by point.",
+    type: "link",
+    url: "https://thewessens.net/ClassroomApps/Main/chaosgame.html",
+    category: "Tutorial",
+    tags: ["chaos game", "fractals", "procedural", "math", "interactive", "iterative", "generative art"]
+  },
+  {
+    title: "Inspired by the Chaos Game",
+    description: "Blog post walking through the iterative chaos game algorithm with beautiful visual examples. Explores variations of the rules and the fractal patterns they produce.",
+    type: "link",
+    url: "https://riccardoscalco.it/blog/inspired-by-the-chaos-game/",
+    category: "Tutorial",
+    tags: ["chaos game", "fractals", "procedural", "blog", "iterative", "visualization", "generative art"]
+  },
+  {
+    title: "Parallel Chaos Game Shader (compute.toys)",
+    description: "WGSL compute shader that runs the chaos game in parallel on the GPU. A great example of how a traditionally iterative algorithm can be parallelized for real-time fractal rendering.",
+    type: "link",
+    url: "https://compute.toys/view/120",
+    category: "Tool",
+    tags: ["chaos game", "shaders", "gpu", "compute", "wgsl", "parallel", "fractals", "procedural"]
+  },
+  {
+    title: "Parallel Chaos Game Video",
+    description: "Video walkthrough covering a parallel GPU implementation of the chaos game. Demonstrates how to convert iterative fractal generation into a parallel computation.",
+    type: "youtube",
+    url: "1L-x_DH3Uvg",
+    category: "Tutorial",
+    tags: ["chaos game", "shaders", "gpu", "parallel", "fractals", "tutorial", "procedural", "youtube"]
   }
 ];
