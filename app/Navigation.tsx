@@ -95,8 +95,8 @@ export default function Navigation() {
                     className="px-2 sm:px-3 py-0 rounded-t-md text-sm font-medium flex items-center h-16 transition-all hover:scale-110"
                     onClick={handleButtonClick}
                   >
-                    <a 
-                      href="https://itch.io/jam/osu-spring-2026-chill-jam"
+                    <a
+                      href="https://osu-video-game-dev-club.itch.io/"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => {
