@@ -63,7 +63,7 @@ export const events: Event[] = [
     date: "2026-04-22",
     time: "4:30 PM",
     endTime: "6:30 PM",
-    location: "MSCS 445"
+    location: "GAB 002"
   },
   {
     type: "Meeting",
