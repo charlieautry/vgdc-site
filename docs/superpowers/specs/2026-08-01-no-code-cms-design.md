@@ -70,6 +70,7 @@ migration.
 | `content/faq.json` | FAQ array in `Footer.tsx` | list of question/answer pairs |
 | `content/settings.json` | strings in `page.tsx` / `Navigation.tsx` | singletons: scrolling banner text, game jam itch.io URL, jam registration banner on/off, other one-off strings |
 | `content/about.json` | prose in `app/about/page.tsx` | ordered list of sections (heading, body, optional image) — officers can add/remove/reorder sections |
+| `content/officers.json` | officer cards in `app/about/page.tsx` | ordered list of officers (name, role, major, year, headshot image) — covers yearly officer turnover without code |
 
 Gallery pipeline is unchanged: officers upload images through the CMS media
 library into `public/images/gallery/`; `generate-gallery.js` runs during the CI
