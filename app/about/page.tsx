@@ -32,7 +32,7 @@ export default function About() {
                     src={officer.image}
                     alt={officer.name}
                     fill
-                    className={`object-cover ${officer.imageClass}`.trim()}
+                    className={`object-cover ${officer.imageClass ?? ''}`.trim()}
                   />
                 </div>
                 <div className="p-6 bg-gray-800">
