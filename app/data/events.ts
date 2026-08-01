@@ -1,3 +1,4 @@
+/** Typed view of content/events.json, edited via /admin. */
 import eventsJson from '@/content/events.json';
 
 export interface Event {
@@ -12,4 +13,4 @@ export interface Event {
   image?: string;
 }
 
-export const events: Event[] = eventsJson.items as Event[];
+export const events: Event[] = eventsJson.items;
