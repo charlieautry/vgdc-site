@@ -1,0 +1,11 @@
+{
+  "title": "Fall 2025 Game Jam",
+  "date": "2025-12",
+  "resultsUrl": "https://itch.io/jam/osu-vgdc-gamejam-2025/results",
+  "entries": [
+    { "title": "VGDC ORBITAL DEMO", "author": "WafflesTheHutt", "image": "/images/f25gamejam/orbitaldemo.png", "link": "https://wafflesthehutt.itch.io/vgdc-orbital-demo", "place": 1 },
+    { "title": "No Return", "author": "Snakatack, Helloimbo", "image": "/images/f25gamejam/noreturn.png", "link": "https://snakatack.itch.io/no-return" },
+    { "title": "Soundtrack", "author": "Leporus", "image": "/images/f25gamejam/soundtrack.png", "link": "https://leporus.itch.io/soundtrack" },
+    { "title": "Shadow Switch Runner", "author": "Daarkswoord, Myanglioce, JoshuaPrice13", "image": "/images/f25gamejam/shadowrunner.png", "link": "https://daarkswoord.itch.io/shadow-switch-runner" }
+  ]
+}

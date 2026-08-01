@@ -1,0 +1,15 @@
+{
+  "title": "Spring 2026 Game Jam",
+  "date": "2026-05",
+  "resultsUrl": "https://itch.io/jam/osu-game-jam-spring-2026/results",
+  "entries": [
+    { "title": "Wandor", "author": "drThunderbuckle", "image": "/images/s26gamejam/wandor.png", "link": "https://drthunderbuckle.itch.io/wandor", "place": 1 },
+    { "title": "ByDayByKnight", "author": "BlastDevelopment", "image": "/images/s26gamejam/bydaybyknight.png", "link": "https://blastdevelopment.itch.io/bydaybyknight", "place": 2 },
+    { "title": "Cold Brew", "author": "Snakatack, Helloimbo", "image": "/images/s26gamejam/coldbrew.png", "link": "https://snakatack.itch.io/cold-brew", "place": 3 },
+    { "title": "Milo", "author": "Shadow05Striker", "image": "/images/s26gamejam/milo.png", "link": "https://shadow05striker.itch.io/milo" },
+    { "title": "Reboot", "author": "WafflesTheHutt", "image": "/images/s26gamejam/reboot.png", "link": "https://wafflesthehutt.itch.io/reboot" },
+    { "title": "DuoDash", "author": "JoshuaPrice13", "image": "/images/s26gamejam/duodash.png", "link": "https://joshuaprice13.itch.io/duodash" },
+    { "title": "Above Myself", "author": "leporus", "image": "/images/s26gamejam/abovemyself.png", "link": "https://leporus.itch.io/above-myself" },
+    { "title": "My Ghost and Me", "author": "Daarkswoord", "image": "https://i0.wp.com/seds.org/wp-content/uploads/2020/02/placeholder.png?fit=1200%2C800&ssl=1", "link": "https://daarkswoord.itch.io/double-life" }
+  ]
+}
