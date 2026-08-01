@@ -12,6 +12,11 @@
 
 **Verification approach:** This repo has no test framework, and adding one for a content migration is YAGNI. The verification analog used throughout: `npm run build` must succeed, and `grep` checks against the exported HTML in `out/` must confirm the migrated content still renders. Run all commands from the repo root with the Bash tool (Git Bash on Windows).
 
+**Conventions adopted after Task 1 quality review (apply to all migration tasks):**
+- Thin re-export modules use bare type annotations, NOT whole-array casts: `export const events: Event[] = eventsJson.items;` — so TypeScript catches a missing required field in the JSON at build time. Only narrow individual fields when JSON's inferred type is genuinely wider (see Task 2's `Resource.type`).
+- Interfaces must type CMS-optional fields as optional (`image?: string`), since the CMS may omit the key entirely.
+- Each re-export module starts with a one-line doc comment, e.g. `/** Typed view of content/events.json, edited via /admin. Empty or absent image = none rendered. */`
+
 **Important:** `app/data/events.ts` and `app/data/importantEvents.ts` have uncommitted working-tree changes (the summer placeholder content). That working-tree content is the source of truth for migration — Tasks 1's JSON files carry those values, and the task's commit subsumes those pending changes. Do NOT `git checkout` or discard them.
 
 ---
@@ -182,6 +187,7 @@ Expected: `32`
 Replace the entire file with:
 
 ```typescript
+/** Typed view of content/resources.json, edited via /admin. */
 import resourcesJson from '@/content/resources.json';
 
 export interface Resource {
@@ -194,7 +200,12 @@ export interface Resource {
   image?: string; // Optional OpenGraph image URL
 }
 
-export const resources: Resource[] = resourcesJson.items as Resource[];
+// JSON infers `type: string`; narrow only that field so every other field keeps
+// real structural checking (a missing required field fails the build).
+export const resources: Resource[] = resourcesJson.items.map((r) => ({
+  ...r,
+  type: r.type as Resource['type'],
+}));
 ```
 
 - [ ] **Step 4: Verify build and rendered content**
@@ -1141,6 +1152,8 @@ paste it in, and you're in.
 
 - Event dates must look like `2026-09-03` (year-month-day). Times like `4:30 PM`.
 - Events disappear from the home page automatically once they've ended.
+- **An event with a blank date never shows on the home page** — always fill in
+  the date if you want the card visible.
 
 ## Fixing mistakes
 
