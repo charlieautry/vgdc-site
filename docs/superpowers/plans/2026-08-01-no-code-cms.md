@@ -786,7 +786,8 @@ git commit -m "feat: move game jams to content/jams/ folder, one file per jam"
   <body>
     <!-- Pinned version. Emergency fallback: replace this script tag with
          https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js (same config.yml works). -->
-    <script src="https://unpkg.com/@sveltia/cms@0.113.5/dist/sveltia-cms.js" type="module"></script>
+    <!-- NOTE: no type="module" — Sveltia's bundle is not an ES module (vendor docs warn against it). -->
+    <script src="https://unpkg.com/@sveltia/cms@0.113.5/dist/sveltia-cms.js"></script>
   </body>
 </html>
 ```
@@ -1211,7 +1212,7 @@ Sign out, sign in once via "Sign in with Token" with a PAT, confirm the dashboar
 
 - [ ] **Step 5: Image round-trip**
 
-Upload a test image via the CMS Assets view into `images/gallery`, confirm it appears in the About page gallery after the build, then delete it via the CMS and confirm it disappears.
+Upload a test image via the CMS Assets view into `images/gallery`, confirm it appears in the About page gallery after the build, then delete it via the CMS and confirm it disappears. (Task 7 review note: Sveltia's subfolder display within a flat `media_folder` has historically been partial — specifically eyeball that uploading into the `gallery` subfolder works; if not, add a per-collection `media_folder` or upload via GitHub web UI as fallback and document it in EDITING.md.)
 
 - [ ] **Step 6: Report**
 
