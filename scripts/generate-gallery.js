@@ -1,5 +1,22 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+
+// Last-commit time keeps "newest first" meaningful in CI, where a fresh
+// checkout erases file mtimes. Untracked files (just added locally or just
+// uploaded via the CMS before their first CI build) fall back to mtime.
+const gitTimeMs = (filePath) => {
+  try {
+    const out = execSync(`git log -1 --format=%ct -- "${filePath}"`, {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+    return out ? Number(out) * 1000 : null;
+  } catch {
+    return null;
+  }
+};
 
 const galleryDir = path.join(process.cwd(), 'public', 'images', 'gallery');
 const outputFile = path.join(process.cwd(), 'app', 'data', 'gallery.ts');
@@ -28,12 +45,14 @@ try {
       const stats = fs.statSync(filePath);
       return {
         name: file,
-        mtime: stats.mtime
+        sortTime: gitTimeMs(filePath) ?? stats.mtime.getTime()
       };
     });
 
-  // Sort by modification time, newest first
-  imageFilesWithStats.sort((a, b) => b.mtime - a.mtime);
+  // Sort newest first; tie-break by name for determinism within one commit
+  imageFilesWithStats.sort(
+    (a, b) => b.sortTime - a.sortTime || a.name.localeCompare(b.name)
+  );
 
   // Generate the paths
   const imagePaths = imageFilesWithStats.map(file => `/images/gallery/${file.name}`);
