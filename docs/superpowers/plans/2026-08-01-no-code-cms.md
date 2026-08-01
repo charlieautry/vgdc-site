@@ -885,6 +885,7 @@ collections:
               - { name: url, label: "URL (or YouTube video ID)", widget: string, hint: "For type 'youtube', paste only the video ID, e.g. LOhfqjmasi0" }
               - { name: category, label: Category, widget: string, hint: "Existing categories: Documentation, Tutorial, Tool, Community, Marketing" }
               - { name: tags, label: Tags, widget: list, hint: "Comma-separated keywords used by search" }
+              - { name: image, label: "Preview Image URL (optional)", widget: string, required: false }
 
   - name: faq
     label: Footer FAQ
