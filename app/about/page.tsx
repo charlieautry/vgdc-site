@@ -12,6 +12,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 
+import officersJson from '@/content/officers.json';
+import aboutJson from '@/content/about.json';
+
 export default function About() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
@@ -20,104 +23,26 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-8 pt-8">
         {/* Officers Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6">25-26 Officer Team</h2>
+          <h2 className="text-3xl font-bold mb-6">{aboutJson.officersHeading}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden relative">
-                <Image 
-                  src="/images/headshots/dilloneckley.jpg" 
-                  alt="Dillon Eckley"
-                  fill
-                  className="object-cover"
-                />
+            {officersJson.items.map((officer) => (
+              <div key={officer.name} className="bg-gray-800 rounded-lg overflow-hidden">
+                <div className="h-[32rem] overflow-hidden relative">
+                  <Image
+                    src={officer.image}
+                    alt={officer.name}
+                    fill
+                    className={`object-cover ${officer.imageClass}`.trim()}
+                  />
+                </div>
+                <div className="p-6 bg-gray-800">
+                  <h3 className="text-2xl font-bold mb-2">{officer.name}</h3>
+                  <p className="text-gray-400 mb-2">{officer.role}</p>
+                  <p className="text-gray-400 mb-2">{officer.major}</p>
+                  <p className="text-gray-400">{officer.year}</p>
+                </div>
               </div>
-              <div className="p-6 bg-gray-800">
-                <h3 className="text-2xl font-bold mb-2">Dillon Eckley</h3>
-                <p className="text-gray-400 mb-2">President</p>
-                <p className="text-gray-400 mb-2">Applied Computer Programming</p>
-                <p className="text-gray-400">Sophomore</p>
-              </div>
-            </div>
-            <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden relative">
-                <Image 
-                  src="/images/headshots/christopherknoles.jpg" 
-                  alt="Christopher Knoles"
-                  fill
-                  className="object-cover scale-150"
-                />
-              </div>
-              <div className="p-6 bg-gray-800">
-                <h3 className="text-2xl font-bold mb-2">Christopher Knoles</h3>
-                <p className="text-gray-400 mb-2">Vice-President</p>
-                <p className="text-gray-400 mb-2">Business Management</p>
-                <p className="text-gray-400">Senior</p>
-              </div>
-            </div>
-            <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden relative">
-                <Image 
-                  src="/images/headshots/jasescott.jpg" 
-                  alt="Jase Scott"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 bg-gray-800">
-                <h3 className="text-2xl font-bold mb-2">Jase Scott</h3>
-                <p className="text-gray-400 mb-2">Secretary</p>
-                <p className="text-gray-400 mb-2">Computer Science</p>
-                <p className="text-gray-400">Junior</p>
-              </div>
-            </div>
-            <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden relative">
-                <Image 
-                  src="/images/headshots/nathanlivesay.png" 
-                  alt="Nathan Livesay"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 bg-gray-800">
-                <h3 className="text-2xl font-bold mb-2">Nathan Livesay</h3>
-                <p className="text-gray-400 mb-2">Treasurer</p>
-                <p className="text-gray-400 mb-2">Computer Science</p>
-                <p className="text-gray-400">Junior</p>
-              </div>
-            </div>
-            <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden relative">
-                <Image 
-                  src="/images/headshots/joshuaprice.jpg" 
-                  alt="Joshua Price"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 bg-gray-800">
-                <h3 className="text-2xl font-bold mb-2">Joshua Price</h3>
-                <p className="text-gray-400 mb-2">Outreach</p>
-                <p className="text-gray-400 mb-2">Computer Science</p>
-                <p className="text-gray-400">Senior</p>
-              </div>
-            </div>
-            <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="h-[32rem] overflow-hidden relative">
-                <Image 
-                  src="/images/headshots/charlesautry.JPEG" 
-                  alt="Charles Autry"
-                  fill
-                  className="object-cover object-[center_20%]"
-                />
-              </div>
-              <div className="p-6 bg-gray-800">
-                <h3 className="text-2xl font-bold mb-2">Charles Autry</h3>
-                <p className="text-gray-400 mb-2">Marketing</p>
-                <p className="text-gray-400 mb-2">Computer Science</p>
-                <p className="text-gray-400">Junior</p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -182,25 +107,25 @@ export default function About() {
           )}
         </section>
 
-        {/* About the Club Section */}
-        <section className="mb-16">
-          <div className="max-w-7xl mx-auto bg-gray-800 rounded-lg p-8">
-            <h2 className="text-3xl font-bold mb-6">What is VGDC?</h2>
-            <div className="space-y-4 text-gray-300">
-              <p className="text-xl indent-8">
-                    The Video Game Development Club was founded in 2015 and officially re-sponsored in 2026. 
-                We are a passionate community of game developers, designers, and enthusiasts inspired by everything videogames. For over a decade, we&apos;ve been dedicated to fostering creativity, learning, and collaboration among our members.
-              </p>
-            <p className="text-xl indent-8">
-                    Our mission as a club is to get more people involved in game development, and we provide a large network of support and resources to help our members learn and grow. From resources and workshops 
-                to game jams and projects, there are a wide range of opportunities for members to develop their skills and connect with others who share their passion for creation.
-              </p>
-              <p className="text-xl indent-8">
-                    Your experience level doesn&apos;t matter - whether you&apos;re a complete beginner or an experienced developer, we welcome you to join us and be a part of our community. We believe that everyone has something valuable to contribute, and we strive to create an inclusive and supportive environment where all members can thrive.
-              </p>
+        {/* About the Club Sections */}
+        {aboutJson.sections.map((section) => (
+          <section key={section.heading} className="mb-16">
+            <div className="max-w-7xl mx-auto bg-gray-800 rounded-lg p-8">
+              <h2 className="text-3xl font-bold mb-6">{section.heading}</h2>
+              <div className="space-y-4 text-gray-300">
+                {section.body.split(/\n\s*\n/).map((paragraph, i) => (
+                  <p key={i} className="text-xl indent-8">{paragraph}</p>
+                ))}
+                {section.image && (
+                  <div className="rounded-lg overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={section.image} alt={section.heading} className="w-full h-auto" />
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ))}
       </div>
     </main>
   );
