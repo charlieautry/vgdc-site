@@ -112,7 +112,7 @@ export default function Home() {
         <section className="mb-6">
           <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 relative">
             <div className="text-center">
-              {importantEvents[currentEvent].image !== "None" && (
+              {importantEvents[currentEvent].image && (
                 <div className="mb-6 rounded-lg overflow-hidden max-w-4xl mx-auto">
                   <img 
                     src={importantEvents[currentEvent].image} 
