@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { events, Event } from './data/events';
 import { importantEvents } from './data/importantEvents';
+import settings from '@/content/settings.json';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, FreeMode } from 'swiper/modules';
 
@@ -87,25 +88,20 @@ export default function Home() {
       </div>
 
       {/* Scrolling Banner */}
-      <a 
-        href="https://campuslink.okstate.edu/organization/videogamedevelopment" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="block mb-8 overflow-hidden bg-red-600 py-3 hover:bg-red-700 transition-colors cursor-pointer"
-      >
-        <div className="animate-scroll whitespace-nowrap">
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-          <span className="text-xl font-bold mx-8">REGISTER TO BE A MEMBER TODAY ON CAMPUSLINK</span>
-        </div>
-      </a>
+      {settings.bannerEnabled && (
+        <a
+          href={settings.bannerUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block mb-8 overflow-hidden bg-red-600 py-3 hover:bg-red-700 transition-colors cursor-pointer"
+        >
+          <div className="animate-scroll whitespace-nowrap">
+            {Array.from({ length: 10 }).map((_, i) => (
+              <span key={i} className="text-xl font-bold mx-8">{settings.bannerText}</span>
+            ))}
+          </div>
+        </a>
+      )}
 
       <div className="max-w-7xl mx-auto px-8">
         {/* Important Event Carousel */}

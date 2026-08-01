@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState, useEffect } from 'react';
+import settings from '@/content/settings.json';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -96,7 +97,7 @@ export default function Navigation() {
                     onClick={handleButtonClick}
                   >
                     <a
-                      href="https://osu-video-game-dev-club.itch.io/"
+                      href={settings.gameJamUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => {
