@@ -1,30 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import faqJson from '@/content/faq.json';
 
 interface FAQ {
   question: string;
   answer: string;
 }
 
-const faqs: FAQ[] = [
-  {
-    question: "When do you meet?",
-    answer: "We typically meet every Wednesday from 4:30 PM to 6:30 PM in MSCS 445, check the schedule on our home page for any changes!"
-  },
-  {
-    question: "Do I need experience to join?",
-    answer: "No experience needed! We welcome everyone from beginners to experienced developers."
-  },
-  {
-    question: "What should I bring?",
-    answer: "Just bring yourself and a laptop if you have one. We'll provide the rest!"
-  },
-  {
-    question: "How do I sign up for the game jam?",
-    answer: "Click the registration banner or hyperlink at the top of the home page."
-  }
-];
+const faqs: FAQ[] = faqJson.items;
 
 export default function Footer() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
