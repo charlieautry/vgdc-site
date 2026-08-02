@@ -28,8 +28,10 @@ paste it in, and you're in.
 
 ## Photos
 
-- **Gallery** (About page slideshow): open the **Assets** section in the editor
-  and upload images into `images/gallery`. They appear after the next build.
+- **Gallery** (About page slideshow): open the **Assets** view in the editor
+  and pick the **Photo Gallery** folder, then upload. New photos automatically
+  show first, about a minute after saving. (There's also a "Photo Gallery"
+  entry in the content list with these instructions.)
 - **Event flyers / jam covers / headshots**: use the image field on the entry
   itself — it uploads for you.
 
