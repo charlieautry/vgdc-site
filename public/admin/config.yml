@@ -2,8 +2,9 @@ backend:
   name: github
   repo: charlieautry/vgdc-site
   branch: main
-  # base_url is filled in by Task 9 (OAuth worker). Until then, use
-  # "Sign in with Token" on the /admin login screen (PAT fallback).
+  # OAuth relay for "Sign in with GitHub" (sveltia-cms-auth Cloudflare Worker).
+  # If it ever breaks, officers can still use "Sign in with Token" (see EDITING.md).
+  base_url: https://sveltia-cms-auth.charlielautry.workers.dev
 
 media_folder: public/images
 public_folder: /images
