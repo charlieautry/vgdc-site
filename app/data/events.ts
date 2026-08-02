@@ -6,7 +6,7 @@ export interface Event {
   title: string;
   desc: string;
   date: string;
-  time: string;
+  time?: string;
   endDate?: string;
   endTime?: string;
   location?: string;

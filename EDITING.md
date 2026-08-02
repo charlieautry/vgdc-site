@@ -1,6 +1,6 @@
 # Editing the VGDC Website (no code needed)
 
-The site is edited at **https://REPLACE-WITH-SITE-URL/admin** — a form-based editor.
+The site is edited at **https://osuvgdc.com/admin** — a form-based editor.
 Every save automatically publishes the change to the live site in ~2 minutes.
 
 ## Logging in

@@ -38,7 +38,7 @@ const getEventEndDateTime = (event: Event): Date => {
 
 const getEventStartDateTime = (event: Event): Date => {
   const d = parseLocalDate(event.date);
-  const { hours, minutes } = parseTime(event.time);
+  const { hours, minutes } = event.time ? parseTime(event.time) : { hours: 0, minutes: 0 };
   d.setHours(hours, minutes, 0, 0);
   return d;
 };
