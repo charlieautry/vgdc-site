@@ -140,6 +140,22 @@ collections:
               - { name: image, label: Headshot, widget: image }
               - { name: imageClass, label: "Photo adjustment (advanced)", widget: string, required: false, default: "", hint: "Leave empty. CSS classes for zoom/crop, e.g. scale-150" }
 
+  # This collection exists mainly to register images/gallery as a named media
+  # folder in the Asset Library. The About-page slideshow is built by scanning
+  # that folder at build time — uploading/deleting photos there is the whole
+  # workflow; the note file below is informational only.
+  - name: gallery
+    label: Photo Gallery
+    description: "Photos for the About page slideshow. Open 'How photos work' below, or upload directly: Assets view → Photo Gallery folder. Newest uploads show first after the next build."
+    media_folder: /public/images/gallery
+    public_folder: /images/gallery
+    files:
+      - name: galleryInfo
+        label: How photos work
+        file: content/gallery-info.json
+        fields:
+          - { name: note, label: Note (not shown on the site), widget: text }
+
   - name: jams
     label: Game Jams
     label_singular: Game Jam
