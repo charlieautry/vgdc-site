@@ -4,47 +4,31 @@
       "name": "Dillon Eckley",
       "role": "President",
       "major": "Applied Computer Programming",
-      "year": "Sophomore",
+      "year": "Junior",
       "image": "/images/headshots/dilloneckley.jpg",
       "imageClass": ""
     },
     {
-      "name": "Christopher Knoles",
-      "role": "Vice-President",
-      "major": "Business Management",
-      "year": "Senior",
-      "image": "/images/headshots/christopherknoles.jpg",
-      "imageClass": "scale-150"
-    },
-    {
       "name": "Jase Scott",
-      "role": "Secretary",
+      "role": "Vice-President",
       "major": "Computer Science",
-      "year": "Junior",
+      "year": "Senior",
       "image": "/images/headshots/jasescott.jpg",
       "imageClass": ""
     },
     {
       "name": "Nathan Livesay",
-      "role": "Treasurer",
-      "major": "Computer Science",
-      "year": "Junior",
-      "image": "/images/headshots/nathanlivesay.png",
-      "imageClass": ""
-    },
-    {
-      "name": "Joshua Price",
       "role": "Outreach",
       "major": "Computer Science",
       "year": "Senior",
-      "image": "/images/headshots/joshuaprice.jpg",
+      "image": "/images/headshots/nathanlivesay.png",
       "imageClass": ""
     },
     {
       "name": "Charles Autry",
       "role": "Marketing",
       "major": "Computer Science",
-      "year": "Junior",
+      "year": "Senior",
       "image": "/images/headshots/charlesautry.JPEG",
       "imageClass": "object-[center_20%]"
     }
