@@ -1,13 +1,15 @@
 {
   "items": [
     {
-      "type": "Summer Break",
-      "title": "No Meeting",
-      "desc": "Enjoy your break!",
-      "date": "",
-      "time": "",
-      "endTime": "",
-      "location": "N/A"
+      "type": "Meeting",
+      "title": "Fall 2026 Kickoff",
+      "desc": "Welcome to the fall 2026 semester and hope everyone had a good summer! Our first meeting will be Wednesday August 19 from 5:30 to 7:30 PM in Math Sciences (MSCS) 445! This meeting will be an introductory meeting for us to talk about the club and introduce all of the officers. It will also be a good chance to meet people, and we will have free pizza! See y'all there!",
+      "date": "2026-08-19",
+      "time": "5:30",
+      "endDate": "",
+      "endTime": "7:30",
+      "location": "MSCS 445",
+      "image": ""
     }
   ]
 }
